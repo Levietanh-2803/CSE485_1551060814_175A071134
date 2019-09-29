@@ -1,0 +1,37 @@
+.tintuc{
+	flex: 0 0 67.5%;
+	max-width: 67.5%;
+	display: flex !important;
+    padding: 2%;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+.tintuc-1{
+	flex: auto;
+	max-width: 33.33333%;
+    padding-right: 2%;
+    float: left;
+}
+.tintuc-1 img{
+	width: 100%;
+}
+.heading{
+	color: #696969;
+	text-decoration: none;
+}
+
+/* hết  phần tin tức */
+
+
+.row_2{
+    flex: 0 0 30%;
+	max-width: 30%;
+	display: flex !important;
+    padding: 3.33333%;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    text-align:  justify;
+}
+.row_2 img{
+    width: 100%;
+}
