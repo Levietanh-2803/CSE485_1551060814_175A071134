@@ -1,0 +1,124 @@
+.header .he-d1 a{
+	text-decoration: none;
+}
+.he-d1 {
+	height: 36px;
+	display: flex !important;
+}
+.he-d1 .menu ul{
+	list-style: none;
+	display: flex;
+}
+/* hết dòng 1 trên trang */
+
+
+
+.he-d2{
+	height: 100px;
+	display: flex !important;
+}
+.he-d2 .menu{
+	display: block;
+}
+
+.he-d2 .menu ul{
+	list-style: none;
+	display: flex;
+}
+.he-d2 .menu a{
+	text-decoration: none;
+}
+/* kết thúc dòng 2  */
+
+
+
+
+/* kết thúc dòng 3 */
+#slideshow{
+    position: relative;
+    height: 400px;
+}
+.img-list{
+    width:100%;
+}
+
+.img-list img{
+    width:100%;
+    height: 400px;
+}
+.img-title{
+    height: 90px;
+    background-color:rgba(1,2,3,0.4);
+    position: relative;
+    bottom:90px;
+    line-height: 90px;
+}
+
+.img-title h1{
+    margin:0px;
+    color:#fff;
+    text-align: center;
+}
+
+#slideshow span{
+    display:inline-block;
+    color:black;
+    font-size:50px;
+    font-weight: bold;
+    width:60px;
+    background-color:#fff;
+    text-align: center;
+    border:2px solid olive;
+    border-radius: 50%;
+}
+.control{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	height: 90px;
+	width: 90px;
+}
+.arrow-l {
+    position: absolute;
+	justify-content: flex-end !important;
+	right: 30%;
+	top: 30%;
+}
+
+.arrow-r{
+    position: absolute;
+	justify-content: flex-end !important;
+	left: 30%;
+	top: 30%;
+}
+/* kết thúc slide-show */
+
+
+
+.tintuc{
+	flex: 0 0 67.5%;
+	max-width: 67.5%;
+	display: flex !important;
+	padding: 2%;
+	float: left;
+}
+.tintuc-1{
+	flex: 0 0 33.33333%;
+	max-width: 33.33333%;
+	padding-right: 2%;
+}
+.tintuc-1 img{
+	width: 100%;
+}
+.heading{
+	color: #696969;
+	text-decoration: none;
+}
+
+
+
+.media{
+	flex: 0 0 22.5%;
+	max-width: 22.5%;
+	float: right;
+}
