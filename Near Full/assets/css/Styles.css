@@ -1,0 +1,93 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+/* .header................................... */
+@media only screen and (min-width: 992px){
+    header{
+    }
+    
+}
+#navcol-2 li a{
+    color: #000;
+}
+#navcol-2 li a i{
+    color: #35699b;
+}
+#navcol-2 li a:hover {
+    color: #aa914d;
+    text-decoration: underline;
+}
+#sgd a:hover{
+    text-decoration: underline;
+}
+/* ......................................... */
+/* phần chính..................................... */
+.slide-show-heading {
+    height: 90px;
+    background-color: rgba(1,2,3,0.4);
+    position: relative;
+    bottom: 38px;
+    line-height: 90px;
+  }
+  
+  .title-sls {
+    margin: 0px;
+    color: #fff;
+    text-align: center;
+  }
+  
+/* hết mì chính................................. */
+/* ...footer............................. */
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: #024282;
+    padding-top: 30px;
+}
+
+.sub-row p a {
+    color: #ffffff;
+}
+
+
+
+.sub-col{
+    margin: 10px 30px 10px 30px;
+    padding: 0;
+}
+.sub-col li{
+    margin-bottom: 5px;
+}
+.sub-col li a:hover{
+    color:#024282;
+    background-color: azure;
+}
+.sub-col li a{
+    width: 100%;
+    color: #fff;
+    background-color: #42719f;
+    text-align: left;
+}
+.sub-col li a i{
+    margin-right: 5px;
+}
+
+
+.fsub-col li a{
+    color: 	#a1a1a1;
+    font-size: 13px;
+    padding: 5px 0px 0px 0px;
+}
+.fsub-col li a:hover{
+    color: #aa914d;
+}
+
+
+.row-copy{
+    background-color: cornsilk;
+    font-size: 14px;
+}
+
+/* ............................ */
