@@ -31,7 +31,7 @@
                 </div>
             </div>
 			<?php
-				include 'C onnect.php';
+				include 'Connect.php';
 				if(isset($_POST['dangnhap'])){
 					if (empty($_POST['email'])){
 						echo 'Bạn chưa nhập tên đăng nhập';
