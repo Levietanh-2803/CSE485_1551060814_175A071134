@@ -1,7 +1,7 @@
 <?php ?>
 <script src="assets/css/styles.css"></script>
     <div class="footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row sub-row">
                 <div class="col-lg-3 col-sm-6"> <p><a href="#"><b>ĐH NGUYỄN TẤT THÀNH</b></a></p>
                         <ul class="fsub-col">
@@ -59,7 +59,10 @@
             </div>
     </div>
         <!-- end copyright -->
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
 </body>
 </html>

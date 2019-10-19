@@ -1,0 +1,192 @@
+html, body{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    color: #000;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+}
+/* .header................................... */
+#navcol-2 li a{
+    color: #000;
+    
+}
+#navcol-2 li a i{
+    color: #35699b;
+}
+#navcol-2 li a:hover {
+    color: #aa914d;
+    text-decoration: underline;
+}
+#sgd a:hover{
+    text-decoration: underline;
+}
+
+
+/* ......................................... */
+/* phần chính..................................... */
+
+.slide-show-heading {
+    height: 90px;
+    background-color: rgba(1,2,3,0.4);
+    position: relative;
+    bottom: 38px;
+    line-height: 90px;
+  }
+  
+.title-sls {
+    margin: 0px;
+    color: #fff;
+    text-align: center;
+}
+    /* tin tức */
+.col-tintuc h2 a{
+    font-size: 20px;
+    font-weight: 500;
+    color: #101010;
+}
+.col-media h2 a{
+    font-size: 20px;
+    font-weight: 500;
+    color: #101010;
+}
+.row-tintuc img{
+    width: 100%;
+}
+.title-hoptac{
+    overflow: hidden;
+     font-size: 16px;
+     color:#202020;
+}
+.title-hoptac:hover{
+    color: #a1a1a1;
+}
+.content-hoptac{
+    margin-top: 20px;
+} 
+.col-media li i{
+    padding-right: 8px;
+}
+.col-media li a{
+    font-size: 14px;
+    color: #2f2e30;
+}
+.col-media li a:hover{
+    color: #a1a1a1;
+}
+
+    /* tại sạo chọn đh Ntt */
+.tscdhntt{
+     width: 100%;
+}
+.tscdhntt .card-body{
+    border: #135baa solid;
+    background-color: #024282;
+    background-repeat: no-repeat;
+    padding: 30px 15% 30px;
+    text-align: center !important;
+}
+#multi-item-example-0{
+    padding-bottom: 30px;
+}
+.tscdhntt a{
+    color: #fff;
+}
+.tscdhntt p{
+    color: #b1b1b1;
+}
+    /* hợp tác quốc tế */
+.title-tintuc{
+    overflow: hidden;
+     font-size: 16px;
+     color:#202020;
+}
+.title-tintuc:hover{
+    color: #a1a1a1;
+}
+.content-tintuc{
+    margin-top: 20px;
+} 
+
+#thoigiansukien{
+    width: 90px;
+    height: 100px;
+    background-color: #054a90;
+}
+#thoigiansukien span{
+    font-size: 24px;
+    line-height: 1.4;
+    color: beige;
+}
+#thoigiansukien span b{
+    font-weight: 900;
+}
+
+.event a{
+    font-size: 16px;
+    color: #020202;
+}
+.event a:hover{
+    color: #a1a1a1;
+}
+
+    /* thành viên */
+#a-thanhvien{
+    color: #250505;
+}
+/* hết mì chính................................. */
+/* ...footer............................. */
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: #024282;
+    padding-top: 30px;
+}
+
+.sub-row p a {
+    color: #ffffff;
+}
+
+
+
+.sub-col{
+    margin: 10px 30px 10px 30px;
+    padding: 0;
+}
+.sub-col li{
+    margin-bottom: 5px;
+}
+.sub-col li a:hover{
+    color:#024282;
+    background-color: azure;
+}
+.sub-col li a{
+    width: 100%;    color: #fff;    background-color: #42719f;    text-align: left;
+}
+.sub-col li a i{
+    margin-right: 5px;
+}
+
+
+.fsub-col li a{
+    color: 	#a1a1a1;
+    font-size: 13px;
+    padding: 5px 0px 0px 0px;
+}
+.fsub-col li a:hover{
+    color: #aa914d;
+}
+.fsub-col ul{
+    margin-inline-start: 10px !important;
+}
+
+.row-copy{
+    background-color: cornsilk;
+    font-size: 14px;
+}
+
+/* ............................ */
