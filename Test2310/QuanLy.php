@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trang quản lý</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<script src="assets/js/jquery-1.10.2.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.form.js"></script>
+</head>
+<body>
+<div class="container">
 <?php
 	include"Header-admin.php";
 	include"connect.php";
@@ -77,7 +89,7 @@
 							echo "<td><a href='#' onclick='xoa()'>Xóa?</a></td>";?>
 							<script type="text/javascript">
 							function xoa(){
-								var r=confirm("Bạn chắc xóa tài khoản <?php echo $r['username'];?> chứ!!")
+								var r=confirm("Bạn đang xóa tài khoản này!!")
 								if(r==true){
 									window.location="Quanly_admin_thaotacvoitaikhoan.php?id=<?php echo $id;?>&key=xoa";
 								}
@@ -88,7 +100,7 @@
 						?>
 							<script type="text/javascript">
 							function capquyen(){
-								var r=confirm("Bạn chắc cấp quyền ADMIN cho tài khoản <?php echo $r['username'];?> chứ!!")
+								var r=confirm("Bạn đang cấp quyền ADMIN cho tài khoản này!!")
 								if(r==true){
 									window.location="quanly_admin_thaotacvoitaikhoan.php?id=<?php echo $id;?>&key=capquyen";
 								}
@@ -130,3 +142,7 @@
 	
 	include"footer-admin.php";
 ?>
+</div>
+
+</body>
+</html>

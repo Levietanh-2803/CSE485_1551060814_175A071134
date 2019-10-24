@@ -46,10 +46,8 @@
 						$qr="select * from tbl_user where username='$email' and password='$password'";
 						$kq=mysqli_query($con,$qr);
 						if(mysqli_fetch_array($kq)>0){
-							$_SESSION['dangnhap']=$email;
-							setcookie('dangnhap', $email, time() + 900);
 							if ($_POST['ck_nhopassword'] == 'on'){
-								setcookie('dangnhap', $email, time() + 60*24*30);
+								setcookie('dangnhap', $email, time() + 60*60*24*30);
 							}
 							else{
 								setcookie('dangnhap', $email, time() + 900);

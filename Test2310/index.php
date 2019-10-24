@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
     <link rel="stylesheet" href="assets/css/Styles.css">
 </head>
-
+ 
 <body>
 <?php
     include "Header.php";
@@ -23,27 +23,27 @@
     <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner caro-a">
-        <div class="carousel-item active">
-            <img src="assets/img/slide01.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption  caro-b d-md-block" style="background-color: rgba(0,0,0,0.45);">
-            
-            <p style="font-size: inherrit; font-weight: 700;" >Tuyển sinh Thạc sỹ Quốc tế chuyên ngành Quản lý chuỗi cung ứng</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/slide02.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption  caro-b d-md-block" style="background-color: rgba(0,0,0,0.45);">
-            
-            <p style="font-size: inherrit; font-weight: 700;" >Tuyển sinh liên thông 2019</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="assets/img/slide03.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption caro-b d-none d-md-block" style="background-color: rgba(0,0,0,0.45);">
-            
-            <p style="font-size: inherrit; font-weight: 700;" >Chính sách học bổng Trường Đại học Nguyễn Tất Thành năm 2019</p>
-            </div>
-        </div>
+            <?php
+                include 'Connect.php';
+                $sql1="SELECT * FROM tbl_slide";
+                $kq1 = mysqli_query($con,$sql1);
+                $active = 0;
+                while ($row1 = mysqli_fetch_array($kq1)){
+                $onactive ="";
+                if($active == 0 )
+                    $onactive ="active";
+
+            ?>
+                    <div class="carousel-item <?php echo("$onactive")?>">
+                        <img src="<?php echo $row1['link'];?>" class="d-block w-100" alt="<?php echo $row1['alt'];?>">
+                        <div class="carousel-caption  caro-b d-md-block" style="background-color: rgba(0,0,0,0.4);">
+                        <p style="font-size: 16px; font-weight: 500;"> <?php echo $row1['mota'];?></p>
+                        </div>
+                    </div>
+                    <?php
+                        $active ++;                
+                }
+            ?>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

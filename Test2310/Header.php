@@ -51,7 +51,7 @@
 
                         <div id="admin" style="padding: 8px;">
                             <i class="fa fa-user-o" style="font-size: 18px;line-height: 18px;color: rgb(255,255,255);"></i>
-                            <a href="#" style="color: rgb(248,248,248);font-size: 16px;"><?php echo $_COOKIE['dangnhap'];?></a>
+                            <a href="#  " style="color: rgb(248,248,248);font-size: 16px;"><?php echo $_COOKIE['dangnhap'];?></a>
                             <span>  &#8722;</span>
                             <a href="Logout.php" style="color: rgb(248,248,248);font-size: 16px;">Đăng xuất</a>
                         </div>

@@ -12,6 +12,7 @@
 	<script src="assets/js/jquery.form.js"></script>
 </head>
 <body>
+	<div class="container">
 <?php
 include "header-admin.php";
 ?>
@@ -32,22 +33,22 @@ include "header-admin.php";
 				</div>
 				<div id="targetLayer" style="display:none;"></div>
 			</form>
-			<form>
+			<form id="update" action="Edit-tintuc.php" method="get">
 				<input type="text" name="uimage" id="uimage"/>
+				<div id="loader-icon" style="display:none;"><img src="upload/loader.gif" /></div>
+				<div>
+					<b>Link:</b><span class="batbuoc">*</span>
+					<input type="text" name="link" placeholder="link image" size=50px>
+				</div>
+				<p>
+					<b>Text:</b>
+					<span class="batbuoc">*</span>
+					<textarea style="width:100%; height:100px;" name="mota"></textarea>
+				</p>
+				<p>
+					<input type="submit" id="submit_all" name="submit_all" value="Update" class="btn btn-info" style="text-align:center; width:100px; height:35px">
+				</p>
 			</form>
-			<div id="loader-icon" style="display:none;"><img src="upload/loader.gif" /></div>
-			<div>
-				<b>Link:</b><span class="batbuoc">*</span>
-				<input type="text" name="link" placeholder="link image" size=50px>
-			</div>
-			<p>
-				<b>Text:</b>
-				<span class="batbuoc">*</span>
-				<textarea style="width:100%; height:100px;" name="mota"></textarea>
-			</p>
-			<p>
-				<input type="submit" name="submit_all" value="Update" class="btn btn-info" style="text-align:center; width:100px; height:35px">
-			</p>
 		</div>
 	</div>
 
@@ -88,7 +89,7 @@ include "header-admin.php";
 		});
 	</script>
 <?php
-	if(isset($_POST['submit_all'])){
+	if(isset($_GET['submit_all'])){
 		$i=0;
 		$_error[$i]='';
 		if(isset($_POST['uimage'])&&$_POST['uimage']!=null){
@@ -141,5 +142,6 @@ else{
 	header("location:./index.php");
 }
 ?>
+	</div>
 </body>
 </html>

@@ -12,13 +12,15 @@
 	<script src="assets/js/jquery.form.js"></script>
 </head>
 <body>
+	<div class="container">
 <?php
 include "header-admin.php";
 ?>
 	<br>
 	<div class="panel panel-default">
 		<div class="panel-body">
-			<h2 style="text-align:center">Trang thêm slider mới</h2>
+			<h2 style="text-align:center">Trang thêm slider</h2>
+			<a href="QuanLySlider.php" style="float: right;">Quản lý Slider</a>
 			<form id="uploadImage" action="Upload.php" method="post">
 				<div class="form-group">
 					<label>File Image</label>
@@ -32,22 +34,22 @@ include "header-admin.php";
 				</div>
 				<div id="targetLayer" style="display:none;"></div>
 			</form>
-			<form>
-				<input type="text" name="uimage" id="uimage"/>
+				<div id="loader-icon" style="display:none;"><img src="upload/loader.gif" /></div>
+			<form id="update" action="Edit-slider.php" method="post">
+				<input type="text " name="uimage" id="uimage"/>
+				<div>
+					<b>Alt</b><span class="batbuoc">*</span>
+					<input type="text" name="alt" placeholder="Alt image" size=50px>
+				</div>
+				<p>
+					<b>Text:</b>
+					<span class="batbuoc">*</span>
+					<textarea style="width:100%; height:100px;" name="mota"></textarea>
+				</p>
+				<p>
+					<input type="submit" name="submit_all" value="Update" class="btn btn-info" style="text-align:center; width:100px; height:35px">
+				</p>
 			</form>
-			<div id="loader-icon" style="display:none;"><img src="upload/loader.gif" /></div>
-			<div>
-				<b>Alt</b><span class="batbuoc">*</span>
-				<input type="text" name="alt" placeholder="Alt image" size=50px>
-			</div>
-			<p>
-				<b>Text:</b>
-				<span class="batbuoc">*</span>
-				<textarea style="width:100%; height:100px;" name="mota"></textarea>
-			</p>
-			<p>
-				<input type="submit" name="submit_all" value="Update" class="btn btn-info" style="text-align:center; width:100px; height:35px">
-			</p>
 		</div>
 	</div>
 
@@ -87,7 +89,9 @@ include "header-admin.php";
 			});
 		});
 	</script>
+
 <?php
+include "Connect.php";
 	if(isset($_POST['submit_all'])){
 		$i=0;
 		$_error[$i]='';
@@ -110,14 +114,16 @@ include "header-admin.php";
 			$_error[$i] = "Bạn chưa nhập thông tin ảnh";
 		}
 		if ($_POST['uimage']!=null&&$_POST['alt']!=null&&$_POST['mota']!=null&&$_COOKIE['dangnhap']!=null){
-			$sql="INSERT INTO tbl_slider (link, mota, alt) VALUES (N'$uimage', N'$mota', N'$alt', N'".$_COOKIE['dangnhap']."')";
+			$sql="INSERT INTO tbl_slide (link, mota, alt) VALUES (N'$uimage', N'$mota', N'$alt')";
 			if (mysqli_query($con,$sql)){
 				echo "<script language='javascript' type='text/javascript' >";
 				echo "alert('Thêm slider thành công');";    
 				echo "</script>";
+				header('Location: Edit-slider.php');
 			}else{
 				$i++;
 				$_error[$i] = "Lỗi khi INSERT $alt:".mysqli_error($con)."<br>";
+				header('Location: Edit-slider.php');
 			}
 		}
 		if($i!=0){
@@ -141,5 +147,6 @@ else{
 	header("location:./index.php");
 }
 ?>
+	</div>
 </body>
 </html>
