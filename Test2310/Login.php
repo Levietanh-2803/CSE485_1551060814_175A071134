@@ -47,7 +47,7 @@
 						$kq=mysqli_query($con,$qr);
 						if(mysqli_fetch_array($kq)>0){
 							if ($_POST['ck_nhopassword'] == 'on'){
-								setcookie('dangnhap', $email, time() + 60*60*24*30);
+								setcookie('dangnhap', $email, time() + 60*24*30);
 							}
 							else{
 								setcookie('dangnhap', $email, time() + 900);
